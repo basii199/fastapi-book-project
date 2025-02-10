@@ -21,7 +21,7 @@ def test_create_book():
         "title": "Harry Potter and the Sorcerer's Stone",
         "author": "J.K. Rowling",
         "publication_year": 1997,
-        "genre": "Fantasy",
+        "genre": "Fantasy"
     }
     response = client.post("/books/", json=new_book)
     assert response.status_code == 201
@@ -36,7 +36,7 @@ def test_update_book():
         "title": "The Hobbit: An Unexpected Journey",
         "author": "J.R.R. Tolkien",
         "publication_year": 1937,
-        "genre": "Fantasy",
+        "genre": "Fantasy"
     }
     response = client.put("/books/1", json=updated_book)
     assert response.status_code == 200

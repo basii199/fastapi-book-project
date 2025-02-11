@@ -1,0 +1,12 @@
+{
+  "services": [
+    {
+      "name": "nginx",
+      "startCommand": "nginx -g 'daemon off;'"
+    },
+    {
+      "name": "fastapi",
+      "startCommand": "uvicorn main:app --host 0.0.0.0 --port 8000"
+    }
+  ]
+}

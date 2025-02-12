@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2_key.pem ubuntu@13.60.33.187 << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2_key.pem ubuntu@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
             cd /home/ubuntu/fastapi-book-project
             git pull origin main
             source venv/bin/activate
